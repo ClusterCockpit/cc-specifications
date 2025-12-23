@@ -31,16 +31,16 @@ There are four line-protocol message flavors:
 
 - **Metric**: The `field` key is `value`, the `measurement` is the metric name
 - **Event**: The `field` key is `event`. Events are actionable informations. The
-`measurement` is set to an event class (job, slurm, status, phases, ?? ). Additional tag
-`function` to indicate the purpose, similar to a REST endpoint (for the job
-class this can be start_job and stop_job).
+  `measurement` is set to an event class (job, slurm, status, phases, ?? ).
+  Additional tag `function` to indicate the purpose, similar to a REST endpoint
+  (for the job class this can be start_job and stop_job).
 - **Log**: The `field` key is `log`. Log messages are purely informational.
   The `measurement` is set to the component identifier [ccb, ccms, ccmc, ccem,
-ccnc]. Additional tag `loglevel` to set the log level (debug, info, warn,
-error).
+  ccnc]. Additional tag `loglevel` to set the log level (debug, info, warn,
+  error).
 - **Control**: The `field` key is `control`, the `measurement` is set to a
-control class (rapl, freq, prefetcher, topology, config). Additional tag
-`method` with on of [GET,PUT].
+  control class (rapl, freq, prefetcher, topology, config). Additional tag
+  `method` with on of [GET,PUT].
 
 ## Messaging subjects
 
@@ -50,14 +50,14 @@ types and easily filter the types an application is interested in the following
 subject hierarchy tree is used:
 
 ```txt
-<cluster name>. |
-                --- metrics
-                |
-                --- events.[job, slurm]
-                |
-                --- log.[ccb, ccms, ccmc, ccem, ccnc]
-                |
-                --- control.[get, put]
+cc.<cluster name>. |
+                   --- metrics
+                   |
+                   --- events.[job, slurm]
+                   |
+                   --- log.[ccb, ccms, ccmc, ccem, ccnc]
+                   |
+                   --- control.[get, put]
 ```
 
 ## Rules valid for all message categories
