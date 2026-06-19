@@ -1,5 +1,7 @@
 # Specifications for datastructures, interfaces, and file formats
 
+**NOTICE:** This documentation is deprecated in will be removed in the future. User the information available on the [ClusterCockpit Website](https://clustercockpit.org).
+
 Since most of the specifications are relevant and implemented in `cc-backend`
 they will use the same versioning.
 
